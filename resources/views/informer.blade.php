@@ -1,7 +1,7 @@
 @extends('welcome')
 
 @section('content')
-	<h3>Погода в Брянске на {{date('d-m-Y H:i',time())}}</h3>
+	<h3>Погода в Брянске на {{date('d-m-Y H:i',time())}} (API запрос к https://tech.yandex.ru/weather/)</h3>
 	@if(!empty($weather))
 		<ul>
 			<li>Температура воздуха: {{$weather['temp']}} °C (ощущается как {{$weather['feel']}} °C)</li>

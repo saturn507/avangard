@@ -13,7 +13,8 @@
 
 
 Route::get('/', function () {
-  return redirect()->route('orders');
+  //return redirect()->route('orders');
+  return view('welcome');
 });
 
 Route::get('/orders/{filter?}', 'OrderController@allOrders')->where(['filter' => '[a-z]+'])->name('orders');
